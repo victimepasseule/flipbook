@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flipbook</title>
+
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#ffffff;
+      padding: 18px;
+    }
+
+    #book{
+  width: 1000px;
+  height: 500px;
+  position: relative;
+  box-shadow: none; /* ← aucune ombre */
+}
+
+/* neutralise toutes les ombres internes éventuelles */
+.stf__page,
+.stf__item,
+.stf__item::before,
+.stf__item::after{
+  box-shadow: none !important;
+  filter: none !important;
+}
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+</head>
+
+<body>
+
+<div id="book">
+	<div class="fake-page-shadow"></div>
+	</div>
+	
+
+<script>
+const pages = [
+  "https://static.wixstatic.com/media/1fcbd1_cb43873cad6c4669b842c28b6cb273e4~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_11634088f0a04ddda6bcc839ef2850cf~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_a3199982c7b84a28a01aeaa31faa9f24~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_9caa9e7454d54619bea7f005a7fb7188~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_aa20fc35b06b445180d9b8bdbb3429a4~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_841348a4598e431a982e81530808b75c~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_09c067b35ebb4dd0b0ce6418f101a5d8~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_ce4a2e7bc69148118d55cbca25899496~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_1677656c043546aab9958337f12ab8f0~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_1888b4a449dd43168dba4f3d854612a6~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_948af115dde74b3fa08fe0009eeffc59~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_7497f741b5084748a49c7988788ef682~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_b47366b883234a889013d24e14ddd24f~mv2.jpg",
+  "https://static.wixstatic.com/media/1fcbd1_cb43873cad6c4669b842c28b6cb273e4~mv2.jpg"
+];
+
+const bookEl = document.getElementById("book");
+
+const pageNodes = pages.map(src=>{
+  const div=document.createElement("div");
+  div.innerHTML=`<img src="${src}" style="width:100%;height:100%;object-fit:contain;">`;
+  return div;
+});
+
+const pageFlip=new St.PageFlip(bookEl,{
+  width:500,
+  height:500,
+  size:"fixed",
+  showCover:false,
+  drawShadow:false,
+  maxShadowOpacity:0,
+  renderingMode:"html"
+});
+
+pageFlip.loadFromHTML(pageNodes);
+</script>
+
+</body>
+</html>
