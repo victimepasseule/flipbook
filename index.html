@@ -28,8 +28,8 @@
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
-  width:960px;
-  height:480px;
+  width:980px!important;
+  height:490px!important;
 }
 
 /* neutralise toutes les ombres internes éventuelles */
@@ -56,20 +56,21 @@
 <script>
 
 const pages = [
-  "https://static.wixstatic.com/media/1fcbd1_03481b2041414494b375fd8931170ef3~mv2.png",
-  "https://static.wixstatic.com/media/1fcbd1_11634088f0a04ddda6bcc839ef2850cf~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_a3199982c7b84a28a01aeaa31faa9f24~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_9caa9e7454d54619bea7f005a7fb7188~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_aa20fc35b06b445180d9b8bdbb3429a4~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_841348a4598e431a982e81530808b75c~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_09c067b35ebb4dd0b0ce6418f101a5d8~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_ce4a2e7bc69148118d55cbca25899496~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_1677656c043546aab9958337f12ab8f0~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_1888b4a449dd43168dba4f3d854612a6~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_948af115dde74b3fa08fe0009eeffc59~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_7497f741b5084748a49c7988788ef682~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_b47366b883234a889013d24e14ddd24f~mv2.jpg",
-  "https://static.wixstatic.com/media/1fcbd1_03481b2041414494b375fd8931170ef3~mv2.png"
+"https://static.wixstatic.com/media/1fcbd1_ce09f28255dd43d49e327a9212bf8d3f~mv2.jpg",
+"https://static.wixstatic.com/media/1fcbd1_ca7721fcffdf4f60aad0610f51108b8e~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_5f89cc6c830347dcaa122da93d93b710~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_f10c53580c2840de9a73cc7019425888~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_be36456674ea4045ab62f6ad8503fe54~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_1f9945a1e71a4fa5882daf421b0f04af~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_17ba6b50c18a438d99dae68cc8a4f339~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_1d6482961a644c2d9f80079694d7d9f5~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_0dd6feba13bd4bea8d296f89a6df7f34~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_9997dcf9d6bc49c49b750fc8e8176e90~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_8bfa913c2e6e4716aac303b30b87a002~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_704af27fed10495783cc23f6a40459e0~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_d2d2d717034b4723b91b7ae3a849343d~mv2.png",
+"https://static.wixstatic.com/media/1fcbd1_5b423e4637d148c2a61e143386c7663a~mv2.jpg",
+	
 ];
 
 const bookEl = document.getElementById("book");
@@ -88,9 +89,9 @@ function initFlipbook(){
     width:500,
     height:500,
     size:"stretch",
-    minWidth:1000,
+    //minWidth:1000,
     maxWidth:1000,
-    minHeight:500,
+    //minHeight:500,
     maxHeight:500,
     showCover:false,
     usePortrait:false,
@@ -114,6 +115,8 @@ window.addEventListener("load",()=>{
   setTimeout(initFlipbook,80);
 });
 
+	
+	
 </script>
 
 </body>
